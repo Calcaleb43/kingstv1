@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title KingsTV GH | CMS
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='../stylesheets/style.css')
+    link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4", crossorigin="anonymous")
+  body
+    // Wrapper
+    #wrapper.divided
+      // Seven
+      section.wrapper.style1.align-center
+        .inner.medium
+          h2 KingsTV CMS
+          form(method='post', action='/api/news')
+            .field.half.first
+              label(for='title') Title
+              input#text(type='text',name='title'  value='')
+            .field.half
+              label(for='url') Image Url
+              input#url(type='url',name='imageUrl' value='')
+            .field.half
+              label(for='category') Category
+              input#category(type='text', name='category' value='')
+            .field.half
+              label(for='publisher') Publisher
+              input#publisher(type='text', name='publisher' value='')
+            .field
+              label(for='body') Body
+              textarea#body(name='body', rows='9')
+            ul.actions
+              li
+                input#submit(type='submit', name='submit', value='Post News')
+        
